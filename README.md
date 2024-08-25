@@ -14,7 +14,7 @@ Llama CPP running on Intel ARC A750 via vulkan: https://github.com/ggerganov/lla
 
 LLM Model: https://huggingface.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF
 
-Comfy UI running in Intel ARC A750 via IPEX: https://github.com/comfyanonymous/ComfyUI 
+Comfy UI running in Intel ARC A750 via IPEX: [https://github.com/comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI?tab=readme-ov-file#intel-gpus) 
 - Change IP and port number as per the server configured.
 - The code assumes the server is hosted on localhost and default port. 
 
