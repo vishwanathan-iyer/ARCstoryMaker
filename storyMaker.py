@@ -20,9 +20,9 @@ import shutil
 story_str = ""
 
 prompt_list=[]
-filename = r'C:\Users\Kannan\Documents\GenAI_Course_Assignment\storyMaker_genAI\workflow_api.json'
-output_dir = r"C:\Users\Kannan\Documents\stable-diffusion\comfyUI\ComfyUI\output"
-story_dir = r"C:\Users\Kannan\Documents\GenAI_Course_Assignment\storyMaker_genAI\Stories"
+filename = r'<path-to-workflow-api-json-file>'
+output_dir = r"<path to comfy ui output folder"
+story_dir = r"<path to stories folder>"
 st.set_page_config(layout="wide")
 st.title("ARC Story Maker")
 
