@@ -1,5 +1,8 @@
 # ARCstoryMaker
 Overview The Story Maker Program is a Python-based application that generates a story based on user input prompts. The program consists of three main parts:
+1. Story Writer
+2. Image Generator
+3. Story Book
 
 Developed on 13th Gen Intel CPU and Intel ARC A750 GPU
 
