@@ -38,7 +38,7 @@ Run comfy ui server using below command:
 
 python main.py --force-fp16 --bf16-vae --use-pytorch-cross-attention --disable-ipex-optimize --highvram
 
-Install requrirements for this project and run the .py file using streamlit. 
+Install requirements for this project and run the .py file using streamlit. 
 
 streamlit run .\storyMaker.py    
 
