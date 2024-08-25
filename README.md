@@ -24,3 +24,5 @@ Flux.1 quantized Model: https://huggingface.co/city96/FLUX.1-schnell-gguf/tree/m
 
 
 Install requrirements for this project and run the .py file using streamlit. 
+
+streamlit run .\storyMaker.py     
