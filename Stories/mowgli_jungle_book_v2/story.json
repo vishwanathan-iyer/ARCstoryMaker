@@ -1,0 +1,18 @@
+{
+    "introduction": {
+        "story_line": "A young boy named Mowgli is raised by wolves in the Indian jungle, far away from human civilization.",
+        "image_prompt": "A baby boy in a basket, surrounded by a pack of wolves in a lush jungle setting"
+    },
+    "main_plot": {
+        "story_line": "Mowgli grows up in the jungle, learning the ways of the wild and befriending the panther Bagheera and the bear Baloo. However, the tiger Shere Khan becomes aware of his existence and vows to kill him.",
+        "image_prompt": "A young Mowgli, sitting on the back of a wolf, with Bagheera and Baloo watching from a distance in a sunny jungle clearing"
+    },
+    "climax": {
+        "story_line": "Mowgli and his friends must defend themselves against Shere Khan's attack. In a fierce battle, Mowgli and his allies fight to protect him from the vengeful tiger.",
+        "image_prompt": "Mowgli standing tall, ready to face Shere Khan, with Bagheera and Baloo standing by his side in a dark and ominous jungle setting"
+    },
+    "morale": {
+        "story_line": "Ultimately, Mowgli defeats Shere Khan and returns to the human village, but not before realizing that he still has a place in the jungle and among his animal friends.",
+        "image_prompt": "Mowgli standing at the edge of the village, looking back at the jungle, with a mix of emotions on his face"
+    }
+}

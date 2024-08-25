@@ -1,0 +1,18 @@
+{
+    "introduction": {
+        "story_line": "Tom is a lazy cat who lives with his owner, a kind old lady. Jerry is a mischievous mouse who lives in the walls of Tom's house.",
+        "image_prompt": "Tom lying on a windowsill, looking bored, with Jerry peeking out from behind a baseboard"
+    },
+    "main_plot": {
+        "story_line": "One day, Jerry gets into a jar of cookies that Tom's owner had left on the counter. Tom sees Jerry and chases him, but Jerry leads him on a wild goose chase around the house.",
+        "image_prompt": "Tom chasing Jerry through a kitchen, with cookies spilling out of a jar on the counter"
+    },
+    "climax": {
+        "story_line": "The chase ends with Jerry hiding in a cheese grater. Tom tries to catch him, but ends up getting his head stuck in the grater.",
+        "image_prompt": "Tom with his head stuck in a cheese grater, while Jerry looks on from safety"
+    },
+    "morale": {
+        "story_line": "In the end, Tom manages to escape from the cheese grater, but Jerry gets away with all the cookies. Tom's owner laughs and says 'It's all just a big joke, Tom!'",
+        "image_prompt": "Tom emerging from the cheese grater, looking embarrassed, while Jerry holds up a cookie and grins"
+    }
+}

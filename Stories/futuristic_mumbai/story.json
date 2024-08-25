@@ -1,0 +1,18 @@
+{
+    "introduction": {
+        "story_line": "In the year 2154, the city of New Mumbai, India was a marvel of modern technology and innovation. The city was a fusion of ancient traditions and futuristic architecture, with towering skyscrapers and flying cars zipping by. The Indian government had invested heavily in advanced technology, and the results were evident in every aspect of life in New Mumbai.",
+        "image_prompt": "A futuristic cityscape of New Mumbai, with towering skyscrapers and flying cars in the background"
+    },
+    "main_plot": {
+        "story_line": "The main character, Dr. Rohan Sharma, a brilliant scientist from New Delhi, had been working on a top-secret project to create a machine that could harness the power of the sun. His invention, a massive solar panel called the 'Surya Grid', was meant to provide clean energy to the entire nation. However, during a test run, the machine malfunctioned, causing a massive solar flare that destroyed a large part of the city.",
+        "image_prompt": "A massive solar flare destroying part of the city, with people running for their lives"
+    },
+    "climax": {
+        "story_line": "The government, led by the ruthless and cunning Prime Minister, Mrs. Nalini Desai, saw this as an opportunity to take control of the city and impose a strict martial law. They imprisoned Dr. Sharma and his team, accusing them of treason. But Dr. Sharma, with the help of his loyal colleagues, managed to escape and gather a small group of rebels to fight against the government's tyranny.",
+        "image_prompt": "A group of rebels, led by Dr. Sharma, fighting against the government's soldiers in the streets of New Mumbai"
+    },
+    "morale": {
+        "story_line": "In the end, the rebels emerged victorious, and Dr. Sharma's machine was repaired and became a symbol of freedom and hope for the people of India. The government was overthrown, and a new, democratic regime was established. The city of New Mumbai was rebuilt, and the Surya Grid became a beacon of clean energy, powering the nation's progress.",
+        "image_prompt": "A cityscape of New Mumbai, with the Surya Grid towering above, symbolizing the nation's progress and freedom"
+    }
+}
