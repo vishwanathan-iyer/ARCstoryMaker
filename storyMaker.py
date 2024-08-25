@@ -267,7 +267,7 @@ if prompt_list!=[]:
             story_json=os.path.join(destination_folder,"story.json")
             story_text=os.path.join(destination_folder,"story.txt")
             with open(story_text, 'w') as f:
-                f.write(extract_story(story_str))  
+                f.write(extract_story(st.session_state.messages[-1]['content']))  
 
             with open(story_json, 'w') as f:
                 # story_json_formatted=json.dumps(story,indent=4)
