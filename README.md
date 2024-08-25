@@ -40,4 +40,10 @@ python main.py --force-fp16 --bf16-vae --use-pytorch-cross-attention --disable-i
 
 Install requrirements for this project and run the .py file using streamlit. 
 
-streamlit run .\storyMaker.py     
+streamlit run .\storyMaker.py    
+
+![Story Writer](https://github.com/vishwanathan-iyer/ARCstoryMaker/blob/main/img/story-writer.png)
+
+![Image Generator](https://github.com/vishwanathan-iyer/ARCstoryMaker/blob/main/img/img-writer.png)
+
+![Story Book](https://github.com/vishwanathan-iyer/ARCstoryMaker/blob/main/img/story-book.png)
