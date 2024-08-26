@@ -52,7 +52,7 @@ streamlit run .\storyMaker.py
 Hardware Notes:
 
 
-As long as the LLM server hosted has an OpenAI complaint server, this code should technically work any hardware vendors implementation. 
+As long as the LLM server hosted has an OpenAI complaint API, this code should technically work any hardware vendors implementation or backend or other inference application that serve LLM models in OpenAI compliant API. 
 
 
 Similarly for Comfy UI for image generation as per the supportrd hardware mentioned in its git repo, if the comfy ui server is hoster as per your hardware configuration this application should technically work on any hardware and any model that you choose to use.
