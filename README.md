@@ -48,6 +48,14 @@ streamlit run .\storyMaker.py
 
 ![Story Book](https://github.com/vishwanathan-iyer/ARCstoryMaker/blob/main/img/story-book.png)
 
+To view just the stories if you don't have access to hardware to generate them follow these steps:
+1. Make a venv in python: python -m venv ARCstoryMaker
+2. Acitvate the environment: .\ARCstoryMaker\Scripts\activate
+3. Update pip: python.exe -m pip install --upgrade pip
+4. Install requirements: pip install -r .\requirements.txt
+5. Then run streamlit run .\storyMaker.py. This will open browser with the app.
+6. Navigate to story book section and choose the story you want to read from the dropdowm menu.   
+
 
 Hardware Notes:
 
