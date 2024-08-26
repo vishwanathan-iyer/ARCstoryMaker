@@ -47,3 +47,19 @@ streamlit run .\storyMaker.py
 ![Image Generator](https://github.com/vishwanathan-iyer/ARCstoryMaker/blob/main/img/img-writer.png)
 
 ![Story Book](https://github.com/vishwanathan-iyer/ARCstoryMaker/blob/main/img/story-book.png)
+
+
+Hardware Notes:
+
+
+As long as the LLM server hosted has an OpenAI complaint server, this code should technically work any hardware vendors implementation. 
+
+
+Similarly for Comfy UI for image generation as per the supportrd hardware mentioned in its git repo, if the comfy ui server is hoster as per your hardware configuration this application should technically work on any hardware and any model that you choose to use.
+
+Please update the IP in the code if not hosted on localhost and their default ports.
+
+However both of these are not tested currently.The output quality does get impacted due to hardware constraints, model type and model size. 
+
+
+
