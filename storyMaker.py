@@ -20,9 +20,9 @@ import shutil
 story_str = ""
 
 prompt_list=[]
-filename = r'<path-to-workflow-api-json-file>'
-output_dir = r"<path to comfy ui output folder"
-story_dir = r"<path to stories folder>"
+filename = r"workflow_api.json"
+output_dir = r"Stories"
+story_dir = r"Stories"
 st.set_page_config(layout="wide")
 st.title("ARC Story Maker")
 
@@ -91,7 +91,10 @@ def extract_story(story_str):
     stroyline_list=[]
     story_formatted=""
     try:    
-        story=json.loads(story_str)
+        if isinstance(story_str,str):
+            story=json.loads(story_str)
+        else:
+            story=story_str
         
         stroyline_list.extend([
         story['introduction']['story_line'], 
@@ -288,9 +291,14 @@ with tab3:
     story_folder=os.path.join(story_dir,option)
     story_path_json=os.path.join(story_folder,'story.json')
 
+    
     f = open(story_path_json)
     story_json = json.load(f)
     f.close()
+
+    story_text=os.path.join(story_folder,"story.txt")
+    with open(story_text, 'w') as f:
+        f.write(extract_story(story_json)) 
     
     col0, col1, col2, col3  = st.columns(4)
     
