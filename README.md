@@ -8,7 +8,7 @@ Developed on 13th Gen Intel CPU and Intel ARC A750 GPU
 
 # Pre-requisites and Steps:
 
-Llama CPP running on Intel ARC A750 via vulkan: https://github.com/ggerganov/llama.cpp
+Llama CPP running on Intel ARC A750 via vulkan(no external dependency)/SYCL(faster optimized): https://github.com/ggerganov/llama.cpp
 - Change IP and port number as per the server configured.
 - The code assumes the server is hosted on localhost and default port. 
 
