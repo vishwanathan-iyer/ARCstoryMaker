@@ -21,7 +21,7 @@ story_str = ""
 
 prompt_list=[]
 filename = r"workflow_api.json"
-output_dir = r"Stories"
+output_dir = r"path-to-comfy-ui-output-images"
 story_dir = r"Stories"
 st.set_page_config(layout="wide")
 st.title("ARC Story Maker")
