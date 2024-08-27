@@ -7,34 +7,42 @@ Overview The Story Maker Program is a Python-based application that generates a 
 Developed on 13th Gen Intel CPU and Intel ARC A750 GPU
 
 # Pre-requisites and Steps:
+## LLAMA CPP Server Setup:
+Llama CPP running on Intel ARC A750 via vulkan(no external dependency)/SYCL(faster optimized): 
+- Clone repo from here: https://github.com/ggerganov/llama.cpp
 
-Llama CPP running on Intel ARC A750 via vulkan(no external dependency)/SYCL(faster optimized): https://github.com/ggerganov/llama.cpp
-- Change IP and port number as per the server configured.
-- The code assumes the server is hosted on localhost and default port. 
+- LLM Model: https://huggingface.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF
 
-LLM Model: https://huggingface.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF
+Run below commands in new command prompt to run Llama server using Llama CPP:
+- For vulkan run the command directly: ./llama-server.exe -m <model_path> --port 8080 -ngl 99 -c 16384
+- For SYCL ensure that environment is initialized
+  - Open Anacoda command prompt in administrator mode
+  - Run C:\Program Files (x86)\Intel\oneAPI\2024.2\oneapi-vars.bat to initialize oneAPI variables.
+  - set SYCL_CACHE_PERSISTENT=1
+  - set ONEAPI_DEVICE_SELECTOR=level_zero:1  -> In multi GPU scenario, this ensures that the model runs on GPU1 (Discrete Graphics)
+  - set SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS=1
+  - Then run: ./llama-server.exe -m <model_path> --port 8080 -ngl 99 -c 16384 
 
-Run below command in new terminal to run Llama server using Llama CPP.
-
-./llama-server.exe -m <model_path> --port 8080 -ngl 99 -c 16384
-
+## COMFY UI Server Setup:
 Comfy UI running in Intel ARC A750 via IPEX: [https://github.com/comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI?tab=readme-ov-file#intel-gpus) 
-- Change IP and port number as per the server configured.
-- The code assumes the server is hosted on localhost and default port. 
 
 ComfyUI-gguf custom node for Q4 model: https://github.com/city96/ComfyUI-GGUF
 
 Flux.1 quantized Model: https://huggingface.co/city96/FLUX.1-schnell-gguf/tree/main 
 
-Open new Anaconda Prompt in administrator mode.
-
-Run C:\Program Files (x86)\Intel\oneAPI\2024.2\oneapi-vars.bat to initialize oneAPI variables. This is required for IPEX. 
+- Open new Anaconda Prompt in administrator mode.
+- Run C:\Program Files (x86)\Intel\oneAPI\2024.2\oneapi-vars.bat to initialize oneAPI variables. This is required for IPEX. 
+- set SYCL_CACHE_PERSISTENT=1
+- set ONEAPI_DEVICE_SELECTOR=level_zero:1
+- set SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS=1
 
 Navigate to comfy ui git folder. 
 
 Run comfy ui server using below command: 
 
 python main.py --force-fp16 --bf16-vae --use-pytorch-cross-attention --disable-ipex-optimize --highvram
+
+Note: There are lot of arguments in comfy ui, added one here that is tested to give good outputs, performance depends on size of prompt.
 
 Install requirements for this project and run the .py file using streamlit. 
 
