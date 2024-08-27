@@ -6,15 +6,13 @@ Overview The Story Maker Program is a Python-based application that generates a 
 
 Developed on 13th Gen Intel CPU and Intel ARC A750 GPU
 
-Pre-requisites:
+# Pre-requisites and Steps:
 
-Llama CPP running on Intel ARC A750 via vulkan: https://github.com/ggerganov/llama.cpp
+Llama CPP running on Intel ARC A750 via vulkan(no external dependency)/SYCL(faster optimized): https://github.com/ggerganov/llama.cpp
 - Change IP and port number as per the server configured.
 - The code assumes the server is hosted on localhost and default port. 
 
 LLM Model: https://huggingface.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF
-
-Command used: 
 
 Run below command in new terminal to run Llama server using Llama CPP.
 
@@ -42,12 +40,17 @@ Install requirements for this project and run the .py file using streamlit.
 
 streamlit run .\storyMaker.py    
 
+# Outputs
+## Story Writer 
 ![Story Writer](https://github.com/vishwanathan-iyer/ARCstoryMaker/blob/main/img/story-writer.png)
 
+## Image Generator
 ![Image Generator](https://github.com/vishwanathan-iyer/ARCstoryMaker/blob/main/img/img-writer.png)
 
+## Story Book
 ![Story Book](https://github.com/vishwanathan-iyer/ARCstoryMaker/blob/main/img/story-book.png)
 
+# View stories
 To view just the stories if you don't have access to hardware to generate them follow these steps:
 1. Make a venv in python: python -m venv ARCstoryMaker
 2. Acitvate the environment: .\ARCstoryMaker\Scripts\activate
@@ -57,17 +60,17 @@ To view just the stories if you don't have access to hardware to generate them f
 6. Navigate to story book section and choose the story you want to read from the dropdowm menu.   
 
 
-Hardware Notes:
+# Hardware Notes:
 
 
-As long as the LLM server hosted has an OpenAI complaint API, this code should technically work any hardware vendors implementation or backend or other inference application that serve LLM models in OpenAI compliant API. 
+- As long as the LLM server hosted has an OpenAI complaint API, this code should technically work any hardware vendors implementation or backend or other inference application that serve LLM models in OpenAI compliant API. 
 
 
-Similarly for Comfy UI for image generation as per the supportrd hardware mentioned in its git repo, if the comfy ui server is hoster as per your hardware configuration this application should technically work on any hardware and any model that you choose to use.
+- Similarly for Comfy UI for image generation as per the supportrd hardware mentioned in its git repo, if the comfy ui server is hoster as per your hardware configuration this application should technically work on any hardware and any model that you choose to use.
 
-Please update the IP in the code if not hosted on localhost and their default ports.
+- Please update the IP in the code if not hosted on localhost and their default ports.
 
-However both of these are not tested currently.The output quality does get impacted due to hardware constraints, model type and model size. 
+- However both of these are not tested currently.The output quality does get impacted due to hardware constraints, model type and model size. 
 
 
 
