@@ -7,6 +7,9 @@ Overview The Story Maker Program is a Python-based application that generates a 
 Developed on 13th Gen Intel CPU and Intel ARC A750 GPU
 
 # Pre-requisites and Steps:
+
+### Note: It is recommended to maintain separate virtual environment for all parts of the project. 
+
 ## LLAMA CPP Server Setup:
 Llama CPP running on Intel ARC A750 via vulkan(no external dependency)/SYCL(faster optimized): 
 - Clone repo from here: https://github.com/ggerganov/llama.cpp
@@ -44,6 +47,7 @@ python main.py --force-fp16 --bf16-vae --use-pytorch-cross-attention --disable-i
 
 Note: There are lot of arguments in comfy ui, added one here that is tested to give good outputs, performance depends on size of prompt.
 
+## Sotry make app setup: 
 Install requirements for this project and run the .py file using streamlit. 
 
 streamlit run .\storyMaker.py    
