@@ -26,9 +26,6 @@ story_dir = r"Stories"
 st.set_page_config(layout="wide")
 st.title("ARC Story Maker")
 
-
-
-
 # Read the worlflow json file for comfy UI promot queue.
 with open(filename, 'r') as file:
     data_str = file.read()
@@ -193,19 +190,52 @@ with tab1:
             st.session_state.messages.append({"role": "assistant", "content": response})
 # This tabs shows the skeleton of the story.
     with col2:
-        st.write("Skeleton of the Story:")
-        if(len(st.session_state.messages)>2): # atleast 1 story is generated
+        load_story = st.checkbox("Load Story")
+        if load_story:
+            story_list=get_folder_names(story_dir)
+            loaded_stroy = st.selectbox(
+                "Select a story: ",
+                tuple(story_list),
+                key="load_story"
+            )
+            st.write("Skeleton of the Story:")
             try:
-                story=json.loads(st.session_state.messages[-1]['content'])
-                st.write("Story",extract_story(st.session_state.messages[-1]['content']))
+                story_folder=os.path.join(story_dir,loaded_stroy)
+                story_path_json=os.path.join(story_folder,'story.json')
+                f = open(story_path_json)
+                story_json = json.load(f)
+                f.close()
+        
+                story=story_json
+                st.write("Story",extract_story(story))
                 prompt_list=extract_prompts(story)
+                img0_path=os.path.join(story_folder,'0.png')
+                img1_path=os.path.join(story_folder,'1.png')
+                img2_path=os.path.join(story_folder,'2.png')
+                img3_path=os.path.join(story_folder,'3.png')
+                st.session_state['image_dir'] = [img0_path,img1_path,img2_path,img3_path]
             except:
-                print("New story not genearted yet.")
+                print("Selected folder does not have story in proper format.")
                 if story_str!="":
                     st.write("Story",extract_story(story_str))
                     story=json.loads(story_str)
                     prompt_list=extract_prompts(story)
-            
+
+        else:
+            if(len(st.session_state.messages)>2): # atleast 1 story is generated
+                try:
+                    story=json.loads(st.session_state.messages[-1]['content'])
+                    st.write("Skeleton of the Story:")
+                    st.write("Story",extract_story(st.session_state.messages[-1]['content']))
+                    prompt_list=extract_prompts(story)
+                except:
+                    print("New story not genearted yet.")
+                    if story_str!="":
+                        st.write("Story",extract_story(story_str))
+                        story=json.loads(story_str)
+                        prompt_list=extract_prompts(story)
+
+                        
 
         
 # Render the 2nd tab data only if the story is generated in proper format and initial prompts are ready to generate the images.        
@@ -287,6 +317,7 @@ with tab3:
     option = st.selectbox(
         "Select a story: ",
         tuple(story_list),
+        key='read_story'
     )
     story_folder=os.path.join(story_dir,option)
     story_path_json=os.path.join(story_folder,'story.json')
