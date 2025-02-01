@@ -47,7 +47,7 @@ python main.py --force-fp16 --bf16-vae --use-pytorch-cross-attention --disable-i
 
 Note: There are lot of arguments in comfy ui, added one here that is tested to give good outputs, performance depends on size of prompt.
 
-## Sotry make app setup: 
+## Story make app setup: 
 Install requirements for this project and run the .py file using streamlit. 
 
 streamlit run .\storyMaker.py    
